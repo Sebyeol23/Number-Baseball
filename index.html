@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $(".number").click(function(event){
+                if($(".show").children().length < 4){
+                    var num = $(this).val();
+
+                    $(".show").append(`<div class="input">${num}</div>`);
+                }
+            });
+            $(".delete").click(function(event){               
+                $(".input").last().remove();
+            })
+            $(".submit").click(function(event){
+                if($(".show").children().length == 4){
+                    alert("good");
+                }
+            })
+        });
+    </script>
+    <title>Number Baseball Game</title>
+</head>
+<body>
+    <div id="app">
+        <div class="show">
+            
+        </div>
+
+        <div class="calculator"> 
+            <button style="grid-area: number-1" class="number" value="1">1</button>
+            <button style="grid-area: number-2" class="number" value="2">2</button>
+            <button style="grid-area: number-3" class="number" value="3"3>3</button>
+            <button style="grid-area: number-4" class="number" value="4">4</button>
+            <button style="grid-area: number-5" class="number" value="5">5</button>
+            <button style="grid-area: number-6" class="number" value="6">6</button>
+            <button style="grid-area: number-7" class="number" value="7">7</button>
+            <button style="grid-area: number-8" class="number" value="8">8</button>
+            <button style="grid-area: number-9" class="number" value="9">9</button>
+            <button style="grid-area: number-0" class="number" value="0">0</button>
+
+            <button style="grid-area: delete" class="delete">delete</button>
+            <button style="grid-area: submit" class="submit">submit</button>
+        </div>
+    </div>
+</body>
+</html>
