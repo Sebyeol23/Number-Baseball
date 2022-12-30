@@ -11,6 +11,7 @@ body {
     padding: 24px;
     border-radius: 20px;
     margin-bottom: 50px;
+    height: 30px;
 
     display: flex;
     justify-content: center;
@@ -52,13 +53,4 @@ body {
   
   .calculator button:active {
     box-shadow: -4px -4px 10px -8px rgba(255, 255, 255, 1) inset, 4px 4px 10px -8px rgba(0, 0, 0, .3) inset;
-  }
-  
-  .result {
-    text-align: right;
-    line-height: var(--button-height);
-    font-size: 48px;
-    font-family: Helvetica;
-    padding: 0 20px;
-    color: #666;
   }
