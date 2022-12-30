@@ -18,7 +18,6 @@ def get_root():
             n = random.randrange(0, 10)
 
         ans.append(n)
-    print(ans)
     return FileResponse("index.html")
 
 @app.get("/check")

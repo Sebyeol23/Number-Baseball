@@ -35,12 +35,14 @@
                     if(success){
                         var number = check.join("");
 
+                        $.ajaxSettings.async = false;
                         $.get("/check", {"number": number}, function(data){
                             $(".memo ol").append(`<li>${number}: ${data.strike}strike ${data.ball}ball (${data.result})</li>`)
 
                             setTimeout(()=>{
                                 if(data.result == "HOMERUN"){
                                     alert(`<${number}>\nHOMERUN~!~!`)
+                                    location.reload();
                                 }
                             }, 500);
                         })
